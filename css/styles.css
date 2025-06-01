@@ -1,0 +1,481 @@
+/* #region body & gen*/
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* #endregion */
+
+/* #region navbar*/
+.navBar{
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #000000;
+    height: 80px;
+    width: 100%;
+    transition: height 0.2s ease 0s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.navBar:hover{
+    height: 120px;
+}
+.navBar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.navBar span{
+    opacity: 0;
+    transition: opacity 0.2s ease 0s;
+    margin-top: 10px;
+}
+.navBar li:hover span{
+    opacity: 1;
+}
+.navBar a{
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 3vh 4vh 3vh;
+}
+.navBar i{
+    font-size: 30px;
+}
+/* #endregion */
+
+/* #region Contenu index.html */
+/* ------------- */
+
+.page{
+    flex: 1 0 auto;
+}
+.contenuPageMenu{
+    padding: 5vw 15vw;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 50px 20vh 50px 20vh;
+}
+/* #endregion */
+
+/* #region Footer*/
+footer{
+    flex-shrink: 0;
+    border-top: 1px dashed rgb(255, 255, 255);
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+
+}
+.contenuFooter{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 15px;
+    padding: 10px 0 20px;
+    color: white,
+}
+.footerServices{
+    padding: 0 20px;
+}
+.footerServices h3{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.footerServices label{
+    padding: 20px 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.contenuFooter a{
+    text-decoration: none;
+}
+.contenuFooter li{
+    list-style:circle;
+}
+
+footer i{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+/* #endregion */
+
+/* #region weatherAPI */
+.weatherAPI{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: minmax(auto, 400px);
+    grid-template-rows: repeat(4, auto);
+    font-family: Poppins, sans-serif;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    color: white;
+    background-color: #0D1117;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.weatherHeader{
+    text-align: center;
+    height: fit-content;
+}
+.weatherHeader h1{
+    border-bottom: 1px solid black;
+}
+
+.searchBar{
+    display: flex;
+	align-items: center;
+	position: relative;
+	max-width: 100%;
+    margin-bottom: 10px;
+    height: fit-content;
+}
+
+.userInput{
+    font-size: 18px;
+	padding: 5px 10px;
+	width: 100%;
+	padding-left: 35px;
+	outline: none;
+	background: #FFFFFF;
+	color: #000000;
+	border: 2px solid #C4D1EB;
+	border-radius: 20px;
+	transition: .3s ease;
+}
+.userInput:focus{
+    background: rgb(212, 212, 212);
+}
+.searchBtn{
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.searchBtn:hover{
+    background-color: rgb(180, 180, 180);
+}
+.card{
+    border: 1px solid white;
+}
+.cardHeader{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+    border: 1px solid white;
+}
+.day{
+    background: url("/API_DOM_LOCALSTR/img/day.jpg");
+}
+.night{
+    background: center url(/API_DOM_LOCALSTR/img/night.jpg);
+}
+
+.topBar{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0 , 0, 0, 0.5);
+    
+}
+
+#cityName{
+    padding: 0 10px 0 0;
+}
+#temp{
+    width: 100%;
+    font-size: 4rem; 
+}
+.tempR{
+    padding: 5px 0 0 2px;
+}
+#tempRessentie{
+    padding: 0 0 0 10px;
+}
+
+.cardFooter{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    padding: 10px;
+    column-gap: 15px;
+    border: 1px solid white;
+}
+
+.right{
+    text-align: right;
+}
+.minMax{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.humidity{
+    grid-area: 2 / 1 / 3 / 2;
+}
+.visibility{
+    grid-area:  3 / 1 / 4 / 2;
+}
+.pressure{
+    grid-area: 1 / 3 / 2 / 4;
+}
+.wind{
+    grid-area:  2 / 3 / 3 / 4;
+}
+.dir{
+    grid-area:  3 / 3 / 4 / 4;
+}
+.error{
+    grid-area: 4 / 1 / 5 / 5;
+}
+#tempminmaxValue{
+    grid-area: 1 / 2 / 2 / 3;
+}
+#humidityValue{
+    grid-area: 2 / 2 / 3 / 3;
+}
+#visibilityValue{
+    grid-area: 3 / 2 / 4 / 3;
+}
+#pressureValue{
+    grid-area: 1 / 4 / 2 / 5;
+}
+#windSpeed{
+    grid-area: 2 / 4 / 3 / 5;
+}
+#windDeg{
+    grid-area: 3 / 4 / 4 / 5;
+}
+/* #endregion */
+
+
+.page{
+    flex: 1 0 auto;
+}
+.pageContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #region catAPI */
+.catAPI{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: auto;
+    width: 400px;
+    height: fit-content;
+    font-family: Poppins;
+    margin-bottom: 20px;
+    background-color: #0D1117;
+    color: white;
+}
+.catfactHeader{
+    text-align: center;
+    border: 1px solid white;
+}
+.catfactBtn{
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    transition: 1s;
+    width: 200px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 25px;
+    background: rgb(13, 17, 23);
+    position: relative;
+    left: 100px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.catfactBtn:hover{
+    background: rgb(24, 32, 44);
+}
+#catfactOutput{
+    margin-top: 10px;
+    word-break: break-word;
+    padding: 10px 5px 5px;
+    margin-top: 5px;
+    text-align: justify;
+    border-top: 1px solid white;
+}
+/* #endregion */
+
+/* #region storage */
+.contenuStorage{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.taskManager{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 20vw;
+    height: auto;
+    color: white;
+    font-size: 18px;
+    overflow: auto;
+    resize: both;
+    font-family: Poppins;
+}
+.taskH2{
+    text-align: center;
+    padding: 10px 0 10px;
+    border: 1px solid white;
+}
+.taskForm{
+    padding: 0 10px 0 10px;
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: fit-content;
+}
+
+.taskInput{
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+    border-radius: 5px 10px 10px 5px;
+    height: 5vh;
+}
+.taskBtn{
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 0px;
+}
+#taskBtn:hover{
+    cursor: pointer;
+}
+
+.taskCard{
+    padding: 0 10px 0 10px;
+}
+#taskList{
+    font-family: Poppins;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 0 10px;
+}
+.tasks{
+    display: flex;
+    margin-top: 5px;
+    background-color: #1E1E1E;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+
+.delTask{
+    border: none;
+    font-size: 20px;
+    background-color: #1E1E1E;
+    color: white;
+    padding: 0 10px;
+    margin-left: auto;
+    display: block; 
+}
+.tasks input{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.delTask:hover{
+    cursor: pointer;
+    color: red;
+}
+input[type = "checkbox"]:checked ~ .taskText{
+    text-decoration: line-through;
+    color: rgb(160, 160, 160);
+}
+
+/* #endregion */
+
+
+
+
+
+
+
+
+
+/* #region Groupe Media Screens <1300px et <600px */
+@media screen and (max-width: 1300px){
+    .contenuFooter{
+        width: 320px;
+        flex-wrap: wrap;
+    }
+    .footerServices h3{
+        padding: 15px;
+    }
+}
+@media screen and (max-width:600px){
+    .navBar{
+        height: 80px;
+    }
+    .contenuFooter{
+        width: 320px;
+        flex-wrap: wrap;
+    }
+    .footerServices h3{
+        padding: 15px;
+    }
+}
+/* #endregion */
+
+/* #region SVG*/
+.svg_icon {
+	position: absolute;
+	left: 18px;
+	fill: #4660DC;
+	width: 18px;
+	height: 18px;
+}
+/* #endregion */
+
+
+/* #region catAPI */
+
+/* #endregion */

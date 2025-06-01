@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    
+    <link rel="stylesheet" href="/API_DOM_LOCALSTR/css/styles.css">
+    <script src="https://kit.fontawesome.com/d192b81991.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navBar">
+        <ul>
+            <li>
+                <a href="/API_DOM_LOCALSTR/index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                    <span>API</span>
+                </a>
+            </li>
+            <li>
+                <a href="/API_DOM_LOCALSTR/html/storage.html">
+                    <i class="fa-solid fa-database"></i>
+                    <span>Storage</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <div class="pageContent">
+            <div class="weatherAPI">
+
+                <div class="weatherHeader">
+                    <h1 class="meteo">Météo</h1>
+                </div>
+
+                <form class="searchBar">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="svg_icon bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg>
+                    <input class="userInput" type="search" placeholder="Rechercher une ville">
+                    <button class="searchBtn" type="submit">🡢</button>
+                </form>
+
+                <div class="card">
+                    <div class="cardHeader">
+                        <div class="topBar">
+                            <h2 id="cityName"></h2>
+                            <h2 id="country"></h2>
+                        </div>
+                        <h1 id="temp"></h1>
+                        <h3 id="description"></h3> 
+                    </div>
+                    <div class="ressentie">
+                        <span class="tempR">T. Ressentie:</span>
+                        <h1 id="tempRessentie"></h1>
+                    </div>
+                    <div class="cardFooter">
+                            <p class="minMax">Min/Max</p>
+                            <span id="tempminmaxValue"></span>
+                            <p class="humidity">Humidité:</p>
+                            <span id="humidityValue"></span>
+                            <p class="visibility">Visibilité:</p>
+                            <span id="visibilityValue"></span>
+                            <p class="pressure">Pression:</p>
+                            <span id="pressureValue"></span>
+                            <p class="wind">Vent:</p>
+                            <span id="windSpeed"></span>
+                            <p class="dir">Direction:</p>
+                            <span id="windDeg"></span>
+                            <p id="error"></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <form class="catAPI">
+                <h1 class="catfactHeader">Cat fact du jour!</h1>
+                <button class="catfactBtn" type="submit">🐈Let's go🐈</button>
+                <p id="catfactOutput"></p>
+                
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contenuFooter">
+            <div class="footerServices">
+                <h3>Mes réseaux</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolas-knittel-2a622a313/">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <label class="liens">linkedin/in/nicolasknittel31</label>
+                        </a>        
+                    </li>
+                    <li>
+                        <a href="https://github.com/Siixo">
+                                <i class="fa-brands fa-github"></i>
+                                <label class="liens">github.com/Siixo</label>
+                        </a>               
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footerServices">
+                <h3>Me contacter</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <label>nicolas.knittel@hotmail.fr</label>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <label>06.08.83.72.71</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/API_DOM_LOCALSTR/js/index.js"></script>
+</body>
+</html>
