@@ -195,10 +195,10 @@ footer i{
     border: 1px solid white;
 }
 .day{
-    background: url("/website/img/day.jpg");
+    background: url("/img/day.jpg");
 }
 .night{
-    background: center url(/website/img/night.jpg);
+    background: center url(/img/night.jpg);
 }
 
 .topBar{
